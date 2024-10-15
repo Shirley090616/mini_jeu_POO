@@ -25,7 +25,8 @@ class Player # toujours mettre une majuscule pour la classe
     player.gets_damage(damage)
     end
   
-    def compute_damage #affecte compute damage à entre 1 et 6
+    def compute_damage #affecte compute damage entre 1 et 6
     rand(1..6)
     end
 end
+
