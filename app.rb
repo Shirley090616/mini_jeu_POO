@@ -4,7 +4,7 @@ Bundler.require
 require_relative 'lib/game' #les deux lignes require/relative servent à faire appel aux deux autres fichiers dans dossier lib
 require_relative 'lib/player'
 
-binding.pry #sert à faire les tests
+#binding.pry #sert à faire les tests
 
 player1 = Player.new("she") #nouveau joueur
 player2 = Player.new("José")

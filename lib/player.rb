@@ -1,5 +1,6 @@
-class player
+class Player # toujours mettre une majuscule pour la classe
     attr_accessor :name, :life_points
+    @@player_count = 0
 
     def initialize(name) #definit la methode pr initialise un joueur av points de vie
     @name = name #chaine de caractere+nom du joueur
