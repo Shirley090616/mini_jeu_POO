@@ -9,14 +9,15 @@ require_relative 'lib/player'
 player1 = Player.new("She") #nouveau joueur
 player2 = Player.new("Mathieu")
 
-puts "Voici l'état de nos joueurs :"
-player1.show_state
-player2.show_state
-puts "Passons à la phase d'attaque"
 while player1.life_points > 0 && player2.life_points > 0 #repete tant que points 
     #de vie joueur1 superieur à 0 et points de vie joueur2 sup. à 0
-    player2.attacks(player1) #joueur 1 attaque joueur2
+    puts "Voici l'état de nos joueurs :"
+    player1.show_state
+    player2.show_state
+
+    puts "Passons à la phase d'attaque"
+    player1.attacks(player2) #joueur 1 attaque joueur2
     break if player2.life_points <= 0 #stop si point de vie joueur2 inferieur
     #ou egal à 0
-    player1.attacks(player2) #joueur2 attaque joueur1
+    player2.attacks(player1) #joueur2 attaque joueur1
   end
