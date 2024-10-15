@@ -6,8 +6,8 @@ require_relative 'lib/player'
 
 #binding.pry #sert à faire les tests
 
-player1 = Player.new("she") #nouveau joueur
-player2 = Player.new("José")
+player1 = Player.new("José") #nouveau joueur
+player2 = Player.new("She")
 
 puts "Voici l'état de nos joueurs :"
 player1.show_state
