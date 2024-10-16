@@ -1,12 +1,10 @@
 class Player # toujours mettre une majuscule pour la classe
-    attr_accessor :name, :life_points, :weapon_level, :new_weapon_level #attribut nom et point de vie armement
+    attr_accessor :name, :life_points, :weapon_level #attribut nom et point de vie armement
     
-
     def initialize(name) #definit la methode pr initialise un joueur av points de vie
     @name = name #chaine de caractere+nom du joueur
-    @life_points = 100 #points de vie du joueur = 10
+    @life_points = 10 #points de vie du joueur = 10
     @weapon_level = 1 # ne pas mettre 0
-    @new_weapon_level = 1
     end
 
     def show_state #methode pour initialise l'etat des joueurs
@@ -33,19 +31,24 @@ class Player # toujours mettre une majuscule pour la classe
 end
 
 class HumanPlayer < Player
-    attr_accessor :weapon_level
+  attr_accessor :weapon_level
+    def initialize(name) #definit la methode pr initialise un joueur av points de vie
+    @name = name #chaine de caractere+nom du joueur
+    @life_points = 100 #points de vie du joueur = 10
+    @weapon_level = 1 # ne pas mettre 0
+    end
     def search_weapon
-        new_weapon_level = rand(5..9)
+        new_weapon_level = rand(1..6)
         puts "Tu as trouvé une arme de niveau #{new_weapon_level}."
-        if @new_weapon_level > @weapon_level
-          @weapon_level = @new_weapon_level
+        if new_weapon_level > @weapon_level
+          @weapon_level = new_weapon_level
           puts "Youhou ! elle est meilleure que ton arme actuelle : tu la prends."
         else
           puts "Merde... elle n'est pas mieux que ton arme actuelle..."
         end
-      end
-
     end
+
+end
 
 
 
